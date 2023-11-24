@@ -140,6 +140,12 @@ nav li a.active {
   padding-right: 15px; 
 }
 
+.plaatje-naast-tekst-rechts{
+  float: right;
+  width: 250px;
+  padding-right: 15px; 
+}
+
 #image-container {
   overflow: hidden;
   position: fixed; 
@@ -280,6 +286,10 @@ footer {
 
 .small-text {
     font-size: 14px;
+}
+
+.bovenop{
+  
 }
 
 
