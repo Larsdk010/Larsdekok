@@ -1,104 +1,74 @@
-/* zorg dat elke box een gestippelde rand krijgt, 
-   zodat je de afmeting goed kunt zien, 
-   letop 1: dit kan de layout soms kan wijzigen 
-   letop 2: laat 1 sterretje voor { staan als je commentaar weghaalt */
-/* * {border: 1px dotted black;} */
-
-/* zorg dat elke box een doorzichtige donkere achtergrond krijgt, 
-   hoe meer boxen in elkaar hoe donkerder de achtergrondkleur 
-   letop: laat 1 sterretje voor { staan als je commentaar weghaalt */
-/* * {background-color: rgba(0,0,0,5%);} */
-
-/* Basisinstellingen voor alle pagina's, alleen aanpassen als je pro wilt worden */
-
-* { /* geldt voor alles */
-  box-sizing: border-box; /* zorg dat border meetelt bij de width en height van boxen */
-  margin: 0px; /* standaard marge 0 */
+/* Algemene opmaak voor alle elementen */
+* {
+  box-sizing: border-box; /* Zorg dat border meetelt bij de width en height van boxen */
+  margin: 0; /* Standaardmarge 0 */
 }
 
-html, body { /* geldt voor html en body */
-  margin: 0px; /* standaard marge 0 */
-  background-color: #000000; /* achtergrondkleur lichtgrijs */
-  color: #ffffff; /* tekstkleur donkergrijs */
+html, body {
+  margin: 0; /* Standaardmarge 0 */
+  background-color: #000000; /* Achtergrondkleur lichtgrijs */
+  color: #ffffff; /* Tekstkleur donkergrijs */
 }
 
-div { /* geldt voor div */
-  overflow: hidden; /* zorgt dat DIV de hoogte krijgt van wat erin zit (anders tellen de floats erin niet mee voor de hoogte en wordt dus wel eens hoogte 0) */
+div {
+  overflow: hidden; /* Zorgt dat DIV de hoogte krijgt van wat erin zit (anders tellen de floats erin niet mee voor de hoogte en wordt dus wel eens hoogte 0) */
 }
 
 /* Indeling voor alle pagina's */
-
 .page {
-  width: 700px; /* vaste breedte van 700 pixels */
-  margin: 10px auto; /* boven en onder 10 pixels marge, links en rechts marge gelijk verdeeld (gecentreerd) */
+  width: 700px; /* Vaste breedte van 700 pixels */
+  margin: 10px auto; /* Boven en onder 10 pixels marge, links en rechts marge gelijk verdeeld (gecentreerd) */
 }
 
-header, footer { /* geldt voor header en footer */
-  margin: 10px 0px;
+header, footer {
+  margin: 10px 0; /* Marge boven en onder header en footer */
 }
 
 main {
-  text-align: justify; /* tekst uitvullen */
+  text-align: justify; /* Tekst uitvullen */
 }
 
-h1, h2, h3 { /* geldt voor h1 en h2 en h3 */
-  margin: 10px 0px;
-  text-align: center; /* tekst centreren */
+h1, h2, h3 {
+  margin: 10px 0; /* Marge boven en onder koppen */
+  text-align: center; /* Tekst centreren */
 }
 
 p {
-  margin: 10px 0px;
-  text-align: justify; /* tekst links en rechts uitvullen */
+  margin: 10px 0; /* Marge boven en onder alinea's */
+  text-align: justify; /* Tekst links en rechts uitvullen */
 }
 
 img {
-  margin: 10px 0px;
+  margin: 10px 0; /* Marge boven en onder afbeeldingen */
   width: 200px;
 }
 
-/* Indeling voor hoofd pagina */
-
-/* .item {} */ /* hier doen we nog niks mee, dat mag je zelf toevoegen */
-
-.item-plaatje {
-  float: left;
-  width: 250px;
-  padding-right: 15px; /* zorgt dat plaatje niet tegen tekst komt */
-}
+/* Indeling voor hoofdpagina */
 .item-tekst {
   float: right;
   width: 450px;
 }
 
-/* Indeling voor sub pagina */
-
 /* Opmaak voor alle pagina's */
-
 h1, h2, h3 {
-  color: rgb(255, 0, 0);
-}
-
-.smalltext {
-  text-align: center;
-  font-size: 0.7em;
+  color: rgb(255, 0, 0); /* Rode tekstkleur voor koppen */
 }
 
 a {
-  color: skyblue;
-  text-decoration: none;
+  color: skyblue; /* Standaard linkkleur */
+  text-decoration: none; /* Geen onderstreping voor links */
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Onderstreping bij hover */
 }
-
 
 nav {
   position: absolute;
   top: 20px;
   right: 20px;
-  size: 10px;
-  z-index: 1; 
+  size: 10px; /* Ongeldige eigenschap - wellicht verwijderen */
+  z-index: 1; /* Z-index voor positionering bovenop andere elementen */
 }
 
 nav a {
@@ -106,60 +76,59 @@ nav a {
   text-decoration: none;
   margin-right: 20px;
 }
- ul {
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-    background-color: gray;
-    overflow: hidden;
+
+nav a ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  background-color: none; /* Geen achtergrondkleur */
+  overflow: hidden;
 }
 
 nav ul li {
-    float: left;
+  float: left;
 }
 
 nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 nav li a:hover {
-    background-color: #eadf19;
+  background-color: #eadf19; /* Achtergrondkleur bij hover */
 }
 
 nav li a.active {
-    background-color: skyblue;
+  background-color: skyblue; /* Achtergrondkleur voor actieve link */
 }
 
-.plaatje-naast-tekst{
+.plaatje-naast-tekst {
   float: left;
   width: 250px;
-  padding-right: 15px; 
+  padding-right: 15px;
 }
 
-.plaatje-naast-tekst-rechts{
+.plaatje-naast-tekst-rechts {
   float: right;
   width: 250px;
-  padding-right: 15px; 
+  padding-right: 15px;
 }
 
 #image-container {
   overflow: hidden;
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.2; 
+  opacity: 0.2;
   background-image: url('../afbeeldingen/Travis Scott.png');
   background-size: cover;
   background-position: center;
 }
-
-
 
 .dropbtn {
   display: inline-block;
@@ -167,11 +136,10 @@ nav li a.active {
   color: white;
 }
 
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: gray;
+  background-color: none; /* Geen achtergrondkleur */
   min-width: 160px;
   z-index: 1;
 }
@@ -184,112 +152,70 @@ nav li a.active {
 }
 
 .dropdown-content a:hover {
-  background-color: #eadf19;
+  background-color: #eadf19; /* Achtergrondkleur bij hover */
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
-
-/* test voor niuwe css */
-
+/* Nieuwe CSS-test */
 body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
 }
 
 nav ul {
-    background-color: #333;
-    list-style-type: none;
-    text-align: center;
-    padding: 10px 0;
+  background-color: #333;
+  list-style-type: none;
+  text-align: center;
+  padding: 10px 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 nav ul li a.active-link {
-    color: #ff9900;
+  color: #ff9900;
 }
-
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown-menu:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #555;
-}
-
 
 .main {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-
-.content-item {
-    margin-bottom: 20px;
-}
-
-.image-next-to-text {
-    float: left;
-    margin-right: 20px;
-    max-width: 200px;
-}
-
 
 footer {
-    margin-top: 20px;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
 }
-
 
 .small-text {
-    font-size: 14px;
+  font-size: 14px;
 }
 
-.bovenop{
-  
+.bovenop {
+  z-index: 1;
 }
-
-
